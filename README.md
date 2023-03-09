@@ -4,7 +4,7 @@ Labbet går ut på att utföra en brute-force attack mot en gömd inloggningssid
 
 1. Verifiera att instansen kör en webbserver
 2. Hitta den dolda inloggningssidan
-3. Hitta en användares inloggningsuppgifter genom att utföra en brute force-attack på inloggningssidan.
+3. Hitta en användares inloggningsuppgifter genom att utföra en brute-force attack på inloggningssidan.
 
 
 ## nmap
