@@ -57,7 +57,7 @@ Då kan vi konstruera följande hydra kommando:
 ```sh  
 sudo hydra -L usernames.txt -P password.txt exempel.com http-post-form "/login.php:username=^USER^&password=^PASS^:Invalid username or password."
 ```
-
+### Förklarning av kommandot
 Först måste vi ange vilka användarnamn och lösenord hydra ska använda i attacken. **-L** används för att ange en lista med användarnamn, **-P** används för att ange en lista med lösenord. Hade vi istället angett **-l username** så kommer endast användaren "username" att användas vid inloggning försöken. På samma sätt, hade vi angett **-p password** så kommer endast lösenordet "password" att användas vid inloggning försöken.  
   
  Efter det måste vi ange en url, i det här exemplet är det **exempel.com**.
@@ -70,7 +70,8 @@ Först i strängen så skriver man endpointen, här alltså **login.php** följt
 Sen anger man parametrarna som hittades, alltså: **username=^USER^&password=^PASS^**, när hydra körs sen så kommer **^USER^** och **^PASS^** ersättas med dom användarnamnen och lösenorden som man angett, här spelar det ingen roll om man använt **-L**, **-l**, **-P** eller **-P**. 
   
 Till sist så måste man ange för hydra vad som händer vid misslyckade inloggningsförsök, vi anger texten **"Invalid username or password."**, då vet hydra att om den texten INTE förekommer i HTTP-responsen så betyder det att hydra har lyckats hitta en korrekt inloggningsuppgift!
-  
+
+### Uppgiften
 Er uppgift är att nu hitta informationen som nämns ovan, så ni kan kontruera hydra kommandot på samma sätt. Listan med användarnamnen och listan med lösenorden finner man under hydra katalogen. Det finns en användarnamn/lösenord kombination som är korrekt. 
 
 usernames.txt innehåller ca 2000 användarnamn och passwords.txt innehåller ca 1000 lösenord. Om man försöker med alla  användarnamn/lösenord kombinationer så skulle det ta ca 30 timmar för hydra att lista ut rätt kombination. Tricket här är att först ta reda på ett korrekt användarnamn, sen använda det för att ta reda på lösenordet.
