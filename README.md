@@ -7,7 +7,7 @@ Labbet går ut på att utföra en brute-force attack mot en gömd inloggningssid
 3. Hitta en användares inloggningsuppgifter genom att utföra en brute force-attack på inloggningssidan.
 
 
-##nmap
+## nmap
 Verifiera att instansen kör en webbserver genom att utföra en portskanning på instansen. 
 
 Om man inte redan har nmap installerat kan man enkelt installera det genom:
